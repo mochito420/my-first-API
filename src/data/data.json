@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "item": "sandia",
+      "type": "fruta",
+      "price": 1500,
+      "unidad": "unidad",
+      "id": 0
+    },
+    {
+      "item": "banana",
+      "type": "fruta",
+      "price": 1000,
+      "unidad": "kilo",
+      "id": 1
+    },
+    {
+      "item": "uva",
+      "type": "fruta",
+      "price": 1000,
+      "unidad": "kilo",
+      "id": 2
+    },
+    {
+      "item": "manzana",
+      "type": "fruta",
+      "price": 200,
+      "unidad": "unidad",
+      "id": 3
+    },
+    {
+      "item": "pera",
+      "type": "fruta",
+      "price": 200,
+      "unidad": "unidad",
+      "id": 4
+    },
+    {
+      "item": "durazno",
+      "type": "fruta",
+      "price": 250,
+      "unidad": "unidad",
+      "id": 5
+    },
+    {
+      "item": "papa",
+      "type": "verdura",
+      "price": 800,
+      "unidad": "kilo",
+      "id": 6
+    },
+    {
+      "item": "cebolla",
+      "type": "verdura",
+      "price": 500,
+      "unidad": "kilo",
+      "id": 7
+    },
+    {
+      "item": "zanahoria",
+      "type": "verdura",
+      "price": 600,
+      "unidad": "kilo",
+      "id": 8
+    },
+    {
+      "item": "manzana verde",
+      "type": "fruta",
+      "price": 300,
+      "unidad": "unidad",
+      "id": 9
+    },
+    {
+      "item": "ciruela",
+      "type": "fruta",
+      "price": 500,
+      "unidad": "kilo",
+      "id": 10
+    }
+  ],
+  "clients": []
+}

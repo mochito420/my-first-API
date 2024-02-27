@@ -1,0 +1,26 @@
+GET http://localhost:4200/products
+
+###
+GET http://localhost:4200/products?id=5
+
+###
+POST http://localhost:4200/products
+Content-Type: application/json
+
+{
+    "item": "manzana verde",
+    "type": "fruta",
+    "price": 300,
+    "unidad": "unidad"
+}
+
+###
+PATCH  http://localhost:4200/products?id=0
+
+{
+    "unidad": "unidad"
+}
+
+###
+DELETE http://localhost:4200/products?id=9
+
