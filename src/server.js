@@ -1,8 +1,9 @@
 import http from "http";
 import { ProductsControler } from "./controllers/product-controller.js";
+import url  from "url";
 
 const server = http.createServer(async (req, res) => {
-  const reqPath = parsedUrl.pathname; 
+  const reqPath = url.parse(req.url, true).pathname; 
   const reqMethod = req.method; 
 
   if (reqPath === "/products" && reqMethod === "GET") {
