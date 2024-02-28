@@ -8,19 +8,19 @@ POST http://localhost:4200/products
 Content-Type: application/json
 
 {
-    "item": "manzana verde",
-    "type": "fruta",
-    "price": 300,
-    "unidad": "unidad"
+    "item": "choclo",
+    "type": "verdura",
+    "price": 600,
+    "unidad": "kilo"
 }
 
 ###
-PATCH  http://localhost:4200/products?id=0
+PATCH  http://localhost:4200/products?id=2
 
 {
-    "unidad": "unidad"
+    "price": 1500
 }
 
 ###
-DELETE http://localhost:4200/products?id=9
+DELETE http://localhost:4200/products?id=11
 

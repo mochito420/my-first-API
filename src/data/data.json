@@ -17,14 +17,14 @@
     {
       "item": "uva",
       "type": "fruta",
-      "price": 1000,
+      "price": 1500,
       "unidad": "kilo",
       "id": 2
     },
     {
       "item": "manzana",
       "type": "fruta",
-      "price": 200,
+      "price": 250,
       "unidad": "unidad",
       "id": 3
     },
@@ -52,7 +52,7 @@
     {
       "item": "cebolla",
       "type": "verdura",
-      "price": 500,
+      "price": 800,
       "unidad": "kilo",
       "id": 7
     },
@@ -73,7 +73,7 @@
     {
       "item": "ciruela",
       "type": "fruta",
-      "price": 500,
+      "price": 2000,
       "unidad": "kilo",
       "id": 10
     }
