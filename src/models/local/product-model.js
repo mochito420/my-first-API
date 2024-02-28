@@ -1,9 +1,6 @@
-import fs from "fs/promises";
-import path from "path";
-import { fileURLToPath } from "url";
-import { readData, writeData } from "../controllers/json-controler.js";
+import { readData, writeData } from "../../controllers/json-controler.js";
 
-export class Products {
+export class ProductsModel {
   static async readProducts() {
     const altualsData = await readData(); //read data
 
