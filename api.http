@@ -1,26 +1,26 @@
 GET http://localhost:4200/products
 
 ###
-GET http://localhost:4200/products?id=3
+GET http://localhost:4200/products?id=12
 
 ###
 POST http://localhost:4200/products
 Content-Type: application/json
 
 {
-    "item": "choclo",
+    "item": "ravanito",
     "type": "verdura",
     "price": 600,
     "unidad": "kilo"
 }
 
 ###
-PATCH  http://localhost:4200/products?id=3
+PATCH  http://localhost:4200/products?id=12
 
 {
     "price": 350
 }
 
 ###
-DELETE http://localhost:4200/products?id=11
+DELETE http://localhost:4200/products?id=12
 

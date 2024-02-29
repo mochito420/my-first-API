@@ -38,7 +38,7 @@
     {
       "item": "durazno",
       "type": "fruta",
-      "price": 250,
+      "price": 350,
       "unidad": "unidad",
       "id": 5
     },
@@ -80,7 +80,7 @@
     {
       "item": "choclo",
       "type": "verdura",
-      "price": 600,
+      "price": 350,
       "unidad": "kilo",
       "id": 11
     }
