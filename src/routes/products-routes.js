@@ -1,4 +1,4 @@
-import { ProductsControler } from "../controllers/product-controller.js";
+import { ProductsController } from "../controllers/product-controller.js";
 import url from "url";
 
 export function productsRouter(req, res) {
@@ -7,12 +7,12 @@ export function productsRouter(req, res) {
 
   if (reqPath === "/products" && reqMethod === "GET") {
     res.setHeader("Access-Control-Allow-Origin", "*");
-    ProductsControler.getAll(req, res);
+    ProductsController.getAll(req, res);
   } else if (reqPath === "/products" && reqMethod === "POST") {
-    ProductsControler.create(req, res);
+    ProductsController.create(req, res);
   } else if (reqPath === "/products" && reqMethod === "PATCH") {
-    ProductsControler.update(req, res);
+    ProductsController.update(req, res);
   } else if (reqPath === "/products" && reqMethod === "DELETE") {
-    ProductsControler.delete(req, res);
+    ProductsController.delete(req, res);
   }
 }

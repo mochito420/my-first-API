@@ -2,13 +2,13 @@ import { readData, writeData } from "../../controllers/json-controler.js";
 
 export class ProductsModel {
   static async readProducts() {
-    const altualsData = await readData(); //read data
+    const altualsData = await readData(); 
 
     if (!altualsData.products) {
-      return `products not found`; //si no tiene un array de productos devulve not found
+      return `products not found`; 
     } else {
       const jsonToReturn = altualsData.products;
-      return jsonToReturn; //si el json tiene un array de productos devuelve el array de productos
+      return jsonToReturn; 
     }
   }
   static async readProductByID({ id }) {

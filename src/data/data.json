@@ -83,7 +83,67 @@
       "price": 350,
       "unidad": "kilo",
       "id": 11
+    },
+    {
+      "item": "manzana verder",
+      "type": "verdura",
+      "price": 550,
+      "unidad": "kilo",
+      "id": 12
+    },
+    {
+      "item": "ravanito",
+      "type": "verdura",
+      "price": 600,
+      "unidad": "kilo",
+      "id": 13
     }
   ],
-  "clients": []
+  "users": [
+    {
+      "username": "Ricardo Antonio Leiva",
+      "password": "10203040",
+      "id": 0
+    },
+    {
+      "username": "Jose Castro",
+      "password": "87654321",
+      "id": 1
+    },
+    {
+      "username": "Marco Jesus Castro",
+      "password": "12345678",
+      "id": 2
+    },
+    {
+      "username": "Jorge Armando Castro",
+      "password": "88664422",
+      "id": 3
+    },
+    {
+      "username": "Mochito420",
+      "password": "12345678",
+      "id": 4
+    },
+    {
+      "username": "Mochito420",
+      "password": "180622",
+      "id": 5
+    },
+    {
+      "username": "Evan Bryant Silva",
+      "password": "18817117",
+      "id": 6
+    },
+    {
+      "username": "Ariel Javier Juearez",
+      "password": "5566441122",
+      "id": 7
+    },
+    {
+      "username": "Alberto Manez",
+      "password": "741258963",
+      "id": 8
+    }
+  ]
 }

@@ -1,0 +1,23 @@
+GET http://localhost:4200/users
+
+###
+GET http://localhost:4200/users?id=5
+
+###
+POST http://localhost:4200/users
+Content-Type: application/json
+
+{
+    "username": "Alberto Manez",
+    "password": "741258963"
+}
+
+###
+PATCH  http://localhost:4200/users?id=7
+
+{
+    "contraseña": "Ariel Javier Juearez"
+}
+
+###
+DELETE http://localhost:4200/users?id=8
