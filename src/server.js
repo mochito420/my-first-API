@@ -2,12 +2,15 @@ import http from "http";
 import { productsRouter } from "./routes/products-routes.js";
 import { usersRouter } from "./routes/users-routs.js";
 import { notFoundPage } from "./routes/notfound-rout.js";
+import { homeRouter } from "./routes/home-rout.js";
 
 const server = http.createServer(async (req, res) => {
   if (req.url.startsWith("/products")) {
     productsRouter(req, res);
   } else if (req.url.startsWith("/users")) {
     usersRouter(req, res);
+  } else if (req.url.startsWith("/home") || req.method === "GET") {
+    homeRouter(req, res);
   } else {
     notFoundPage(req, res);
   }

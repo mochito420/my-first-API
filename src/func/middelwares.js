@@ -16,5 +16,8 @@ export function JSONMiddelware(req, res, next) {
   });
 }
 
+export function staticMiddelware(req, res, next) {
+  
+}
 
 

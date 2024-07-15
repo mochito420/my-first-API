@@ -9,6 +9,7 @@ export function productsRouter(req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*");
     ProductsController.getAll(req, res);
   } else if (reqPath === "/products" && reqMethod === "POST") {
+    res.setHeader("Access-Control-Allow-Origin", "*");
     ProductsController.create(req, res);
   } else if (reqPath === "/products" && reqMethod === "PATCH") {
     ProductsController.update(req, res);

@@ -1,6 +1,10 @@
 import url from "url";
 import { JSONMiddelware } from "../func/middelwares.js";
 import { ProductsModel } from "../models/local/product-model.js";
+import {
+  validateNewProduct,
+  validateUpdateProduct,
+} from "../validation/validations.js";
 
 export class ProductsController {
   static async getAll(req, res) {
@@ -30,31 +34,20 @@ export class ProductsController {
 
   static async create(req, res) {
     JSONMiddelware(req, res, async () => {
-      if (
-        req.body &&
-        req.body.hasOwnProperty("item") &&
-        req.body.hasOwnProperty("type") &&
-        req.body.hasOwnProperty("price") &&
-        req.body.hasOwnProperty("unidad")
-      ) {
+      const validationError = validateNewProduct(req.body);
+
+      if (validationError) {
+        res.writeHead(404, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ error: validationError.error }));
+      } else {
         const newProduct = await ProductsModel.createProduct({
           input: req.body,
         });
-
         res.writeHead(201, { "Content-Type": "application/json" });
         res.end(
           JSON.stringify({
             message: `se ha creado un nuevo producto`,
-            information: newProduct,
-          })
-        );
-      } else {
-        res.writeHead(404, { "Content-Type": "application/json" });
-        res.end(
-          JSON.stringify({
-            message:
-              "debes ingresar un nombre un tipo un precio y una unidad para crear un producto",
-            newproduct: req.body,
+            info: newProduct,
           })
         );
       }
@@ -66,12 +59,16 @@ export class ProductsController {
     const { id } = urlParams;
 
     JSONMiddelware(req, res, async () => {
-      if (
-        (req.body && req.body.hasOwnProperty("item")) ||
-        req.body.hasOwnProperty("type") ||
-        req.body.hasOwnProperty("price") ||
-        req.body.hasOwnProperty("unidad")
-      ) {
+      const validatedUpdate = validateUpdateProduct(req.body);
+
+      if (validatedUpdate) {
+        res.writeHead(404, { "Content-Type": "application/json" });
+        res.end(
+          JSON.stringify({
+            error: validatedUpdate.error,
+          })
+        );
+      } else {
         const producToModify = await ProductsModel.updateProduct({
           id: parseInt(id),
           input: req.body,
@@ -82,14 +79,6 @@ export class ProductsController {
             message: "modificaste un producto",
             productmodify: producToModify,
             modification: req.body,
-          })
-        );
-      } else {
-        res.writeHead(404, { "Content-Type": "application/json" });
-        res.end(
-          JSON.stringify({
-            error:
-              "debes ingresar almenos un item, type, price, unidad para modificar un producto",
           })
         );
       }

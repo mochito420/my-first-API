@@ -92,11 +92,32 @@
       "id": 12
     },
     {
-      "item": "ravanito",
-      "type": "verdura",
+      "item": "mango",
+      "type": "fruta",
+      "price": 500,
+      "unidad": "unidad",
+      "id": 13
+    },
+    {
+      "item": "tomate",
+      "type": "fruta",
       "price": 600,
       "unidad": "kilo",
-      "id": 13
+      "id": 14
+    },
+    {
+      "item": "pimiento",
+      "type": "verdura",
+      "price": 200,
+      "unidad": "unidad",
+      "id": 15
+    },
+    {
+      "item": "naranja",
+      "type": "fruta",
+      "price": 1000,
+      "unidad": "kilo",
+      "id": 16
     }
   ],
   "users": [
